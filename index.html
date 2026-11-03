@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Akanshi Srivastava | Learning Experience Design Leader</title>
+<meta name="description" content="Learning experience and instructional design leader with 13+ years designing enterprise learning for ERP transformations, digital adoption and change enablement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F7FB; --panel:#FFFFFF; --ink:#1A1D3A; --muted:#575B7A; --line:#DDE0EE;
+  --accent:#3A4BDC; --accent-ink:#FFFFFF; --mint:#2FB896; --note:#FFD84D; --note-ink:#3a2f00;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Newsreader",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#12142B; --panel:#1B1E3F; --ink:#ECEEFB; --muted:#A5A9C9; --line:#2E3263; --accent:#8D99FF; --accent-ink:#12142B; --mint:#5FD9B8;}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.15rem;line-height:1.65}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:var(--mint);z-index:30}
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;font-family:var(--display)}
+.nav strong{font-weight:800}
+.nav ul{display:flex;gap:22px;list-style:none;padding:0;font-size:.95rem}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+@media(max-width:700px){.nav ul{display:none}}
+
+/* Hero: a course-player frame */
+.hero{padding:56px 0 32px}
+.player{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(26,29,58,.35)}
+.player-bar{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);font-family:var(--display);font-size:.85rem;color:var(--muted)}
+.dots{display:flex;gap:6px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.steps{flex:1;display:flex;gap:4px}.steps b{flex:1;height:6px;border-radius:3px;background:var(--line)}
+.steps b.on{background:var(--accent)}
+.slide{padding:clamp(28px,6vw,64px);display:grid;gap:28px}
+.slide h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,7vw,4.6rem);line-height:1;letter-spacing:-.03em}
+.slide .lead{max-width:34em;font-size:1.3rem;color:var(--muted)}
+.objectives{background:color-mix(in srgb,var(--note) 22%,var(--panel));border-left:6px solid var(--note);padding:16px 20px;border-radius:0 10px 10px 0;max-width:34em}
+.objectives h2{font-family:var(--display);font-size:1rem;margin-bottom:6px}
+.objectives ul{padding-left:1.1em}
+.player-foot{display:flex;gap:12px;flex-wrap:wrap;padding:16px 18px;border-top:1px solid var(--line)}
+.btn{font-family:var(--display);font-weight:600;font-size:1rem;padding:12px 22px;border-radius:999px;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+
+section{padding:64px 0}
+h2.title{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);max-width:38em;margin-bottom:32px}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+.stats div{padding:22px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font-family:var(--display);font-size:2rem;font-weight:800;color:var(--accent)}
+.stats span{font-size:1rem;color:var(--muted);line-height:1.4;display:block}
+
+/* Experience timeline: genuine sequence */
+.timeline{list-style:none;padding:0;border-left:3px solid var(--line);margin-left:8px}
+.timeline li{position:relative;padding:0 0 40px 28px}
+.timeline li::before{content:"";position:absolute;left:-10px;top:8px;width:17px;height:17px;border-radius:50%;background:var(--bg);border:4px solid var(--accent)}
+.timeline h3{font-family:var(--display);font-size:1.3rem}
+.timeline .meta{font-family:var(--display);font-size:.9rem;color:var(--muted);margin-bottom:10px}
+.timeline ul{padding-left:1.1em;max-width:46em}
+.timeline li li{padding:0 0 6px 0;position:static}
+.timeline li li::before{display:none}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px}
+.cols h3{font-family:var(--display);font-size:1.15rem;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0}
+.chips li{font-family:var(--display);font-size:.9rem;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--panel)}
+.chips.mint li{border-color:var(--mint)}
+
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:1rem}
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-family:var(--display);font-size:.9rem;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+
+.contact{background:var(--accent);color:var(--accent-ink);border-radius:22px;padding:clamp(28px,6vw,56px)}
+.contact h2{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.02em;margin-bottom:10px}
+.contact a{color:var(--accent-ink);font-family:var(--display);font-weight:600}
+.contact p{margin-bottom:6px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.95rem}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <strong>Akanshi Srivastava</strong>
+    <nav aria-label="Primary"><ul>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="hero">
+  <div class="player" role="group" aria-label="Introduction">
+    <div class="player-bar">
+      <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="steps" aria-hidden="true"><b class="on"></b><b></b><b></b><b></b><b></b></span>
+      <span>Module 1: Meet Akanshi</span>
+    </div>
+    <div class="slide">
+      <h1>I design learning that people actually finish and use.</h1>
+      <p class="lead">Learning experience and instructional design leader with 13+ years turning complex ERP and technology change into clear, role-based learning, from needs analysis through go-live and hypercare.</p>
+      <div class="objectives">
+        <h2>By the end of this page you will know</h2>
+        <ul>
+          <li>How I plan learning for 1,000+ users</li>
+          <li>Where AI speeds up design without lowering quality</li>
+          <li>How to reach me</li>
+        </ul>
+      </div>
+    </div>
+    <div class="player-foot">
+      <a class="btn primary" href="#experience">See my experience</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+<section id="impact">
+  <h2 class="title">Impact</h2>
+  <p class="sub">Delivered at Deloitte across SAP S/4HANA, Oracle, Workday and Salesforce programs.</p>
+  <div class="stats">
+    <div><strong>1,000+</strong><span>users supported across 10+ U.S. cities, through go-live and hypercare</span></div>
+    <div><strong>100+</strong><span>role- and persona-based learning assets architected</span></div>
+    <div><strong>1,000+</strong><span>training hours delivered by teams I led</span></div>
+    <div><strong>30–40%</strong><span>efficiency gain from AI-enabled design and review</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="title">Experience</h2>
+  <p class="sub">From quality assurance to leading enterprise learning strategy.</p>
+  <ol class="timeline">
+    <li>
+      <h3>Consultant, Strategy, Growth and Transformation, Deloitte</h3>
+      <p class="meta">Feb 2018 to Aug 2026</p>
+      <ul>
+        <li>Led end-to-end learning strategy for ERP transformations, from delivery to go-live and hypercare.</li>
+        <li>Architected 100+ role- and persona-based assets across SAP S/4HANA, Oracle, Workday and Salesforce.</li>
+        <li>Led multiple instructional design teams delivering 1,000+ training hours across functional areas.</li>
+        <li>Used AI for content development, storyboarding, assessments and quality reviews, gaining 30–40% efficiency.</li>
+        <li>Advised clients on modality and experience strategy across ILT, eLearning, simulations, job aids and Quick Reference Guides.</li>
+      </ul>
+    </li>
+    <li>
+      <h3>Instructional Design Associate, Learning Solutions, Fidelity Information Services (FIS)</h3>
+      <p class="meta">Aug 2017 to Feb 2018</p>
+      <ul>
+        <li>Designed ILT and digital learning for enterprise applications across multiple modalities.</li>
+        <li>Built eLearning, simulations, assessments and performance-support assets.</li>
+        <li>Worked with SMEs to confirm accuracy and relevance for end users.</li>
+      </ul>
+    </li>
+    <li>
+      <h3>Lead Quality Analyst, Simplilearn</h3>
+      <p class="meta">Feb 2015 to Jun 2017</p>
+      <ul>
+        <li>Led quality assurance for online learning content and release readiness.</li>
+        <li>Created training standards and quality checklists.</li>
+        <li>Improved instructional materials for professional certification programs.</li>
+      </ul>
+    </li>
+    <li>
+      <h3>Business Analyst, Learning and Instructional Design, Stratbeans Consulting</h3>
+      <p class="meta">Apr 2013 to Sep 2014</p>
+      <ul>
+        <li>Built training solutions across modalities from business requirements.</li>
+        <li>Wrote video scripts and learning materials matched to audience and objectives.</li>
+        <li>Managed training calendars and deliverables.</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<section id="approach">
+  <h2 class="title">Approach</h2>
+  <p class="sub">Learning focuses on what people need to know and do in their role, not on every system feature.</p>
+  <div class="cols">
+    <div>
+      <h3>Strategy</h3>
+      <p>Start with training needs analysis and personas, then choose the modality that fits the task, audience and timeline.</p>
+    </div>
+    <div>
+      <h3>Design</h3>
+      <p>Build curriculum architecture, storyboards and assets with SMEs, and keep quality consistent through shared standards and coaching.</p>
+    </div>
+    <div>
+      <h3>Adoption</h3>
+      <p>Support learners through go-live and hypercare, so change sticks after the training ends.</p>
+    </div>
+  </div>
+  <div class="scroll" style="margin-top:32px">
+    <table>
+      <thead><tr><th>Modality</th><th>Best used for</th></tr></thead>
+      <tbody>
+        <tr><td>ILT</td><td>Complex, role-based processes that need practice and discussion</td></tr>
+        <tr><td>eLearning / WBT</td><td>Consistent concepts for large, distributed audiences</td></tr>
+        <tr><td>Simulations</td><td>Safe, hands-on system practice before go-live</td></tr>
+        <tr><td>Job aids and QRGs</td><td>Support at the moment of work</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="title">Skills and education</h2>
+  <p class="sub">&nbsp;</p>
+  <div class="cols">
+    <div>
+      <h3>Learning</h3>
+      <ul class="chips">
+        <li>Learning strategy</li><li>Learning experience design</li><li>Instructional design</li><li>Curriculum architecture</li><li>Training needs analysis</li><li>Persona-based learning</li><li>Modality strategy</li><li>Content development</li><li>Quality governance</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Change and leadership</h3>
+      <ul class="chips mint">
+        <li>Digital adoption</li><li>Change enablement</li><li>Stakeholder advisory</li><li>Team leadership</li><li>ERP transformation</li><li>AI-enabled learning</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Education</h3>
+      <p><strong>B.Tech, Electronics and Communication</strong><br>GBTU, 2012</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>Let's design your next learning program.</h2>
+    <p>Available immediately. Based in Bangalore.</p>
+    <p>Email: <a href="mailto:akanshi.srivastava1989@gmail.com">akanshi.srivastava1989@gmail.com</a></p>
+    <!-- Add your LinkedIn: <p>LinkedIn: <a href="https://www.linkedin.com/in/your-handle">your-handle</a></p> -->
+  </div>
+</section>
+
+</div>
+</main>
+
+<footer><div class="wrap">&copy; <span id="yr"></span> Akanshi Srivastava</div></footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+const bar = document.getElementById('progress');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+}, {passive:true});
+</script>
+</body>
+</html>
